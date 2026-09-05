@@ -1,0 +1,1113 @@
+/* ========================================
+   AURELIA HOTEL
+   NAVIGATION SYSTEM
+======================================== */
+
+
+/* ========================================
+   SITE HEADER
+======================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    width: 100%;
+
+    background-color: rgba(247, 244, 238, 0.96);
+
+    border-bottom: 1px solid rgba(216, 200, 178, 0.65);
+
+    transition:
+        background-color 0.45s ease,
+        box-shadow 0.45s ease,
+        backdrop-filter 0.45s ease;
+}
+
+
+/* ========================================
+   SCROLLED STATE
+======================================== */
+
+.site-header.is-scrolled {
+    background-color: rgba(247, 244, 238, 0.82);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow:
+        0 10px 35px rgba(17, 17, 15, 0.07);
+}
+
+
+/* ========================================
+   NAVBAR
+======================================== */
+
+.navbar {
+    width: min(
+        calc(100% - 48px),
+        var(--container-width)
+    );
+
+    min-height: 88px;
+
+    margin-inline: auto;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: var(--space-6);
+
+    transition:
+        min-height 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+.site-header.is-scrolled .navbar {
+    min-height: 72px;
+}
+
+
+/* ========================================
+   BRAND
+======================================== */
+
+.navbar-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    gap: 1px;
+}
+
+.navbar-brand-name {
+    font-family: var(--font-display);
+
+    font-size: 32px;
+    font-weight: 600;
+
+    line-height: 0.95;
+
+    letter-spacing: -0.5px;
+
+    color: var(--color-charcoal);
+
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.navbar-brand-subtitle {
+    font-family: var(--font-body);
+
+    font-size: 9px;
+    font-weight: 600;
+
+    line-height: 1;
+
+    letter-spacing: 2.5px;
+
+    text-transform: uppercase;
+
+    color: var(--color-gold);
+}
+
+.navbar-brand:hover .navbar-brand-name {
+    color: var(--color-gold);
+
+    transform: translateY(-1px);
+}
+
+
+/* ========================================
+   MAIN NAVIGATION
+======================================== */
+
+.navbar-main {
+    display: flex;
+
+    align-items: center;
+}
+
+.navbar-menu {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-7);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navbar-item {
+    position: relative;
+}
+
+.navbar-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 0;
+
+    background: none;
+
+    border: 0;
+
+    color: var(--color-charcoal);
+
+    font-family: var(--font-body);
+
+    font-size: 13px;
+    font-weight: 500;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: var(--color-gold);
+}
+
+
+/* ========================================
+   DROPDOWN ARROW
+======================================== */
+
+.dropdown-arrow {
+    display: inline-block;
+
+    font-size: 11px;
+
+    color: var(--color-muted);
+
+    transition:
+        transform 0.35s ease,
+        color 0.3s ease;
+}
+
+.dropdown.is-open .dropdown-arrow {
+    transform: rotate(180deg);
+
+    color: var(--color-gold);
+}
+
+
+/* ========================================
+   DROPDOWN MENU
+======================================== */
+
+.navbar .dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 14px);
+    left: -18px;
+
+    min-width: 230px;
+
+    padding: 10px;
+
+    background-color: rgba(252, 251, 248, 0.98);
+
+    border: 1px solid var(--color-sand);
+
+    border-radius: var(--radius-md);
+
+    box-shadow:
+        0 18px 45px rgba(17, 17, 15, 0.10);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform:
+        translateY(-8px);
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease;
+
+    z-index: 20;
+}
+
+.navbar .dropdown.is-open > .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ========================================
+   DROPDOWN LINKS
+======================================== */
+
+.navbar .dropdown-link {
+    display: block;
+
+    padding: 12px 13px;
+
+    color: var(--color-charcoal);
+
+    border-radius: var(--radius-sm);
+
+    font-size: 13px;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        padding-left 0.25s ease;
+}
+
+.navbar .dropdown-link:hover {
+    background-color: var(--color-cream);
+
+    color: var(--color-gold);
+
+    padding-left: 17px;
+}
+
+
+/* ========================================
+   RIGHT DROPDOWN
+======================================== */
+
+.navbar .dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+
+/* ========================================
+   NAVIGATION ACTIONS
+======================================== */
+
+.navbar-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: var(--space-3);
+
+    flex-shrink: 0;
+}
+
+
+/* ========================================
+   ICON BUTTONS
+======================================== */
+
+.navbar-icon-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    color: var(--color-charcoal);
+
+    border: 1px solid transparent;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar-icon-btn:hover {
+    color: var(--color-gold);
+
+    background-color: var(--color-cream);
+
+    border-color: var(--color-sand);
+}
+
+
+/* ========================================
+   NAVBAR CTA
+======================================== */
+
+.navbar-cta {
+    min-height: 44px;
+
+    padding-inline: 22px;
+
+    white-space: nowrap;
+}
+
+
+/* ========================================
+   MOBILE TOGGLE
+======================================== */
+
+.navbar-mobile-toggle {
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-sand);
+
+    border-radius: var(--radius-sm);
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.navbar-mobile-toggle:hover {
+    background-color: var(--color-cream);
+
+    border-color: var(--color-gold);
+}
+
+.navbar-mobile-toggle span {
+    display: block;
+
+    width: 19px;
+    height: 1.5px;
+
+    background-color: var(--color-charcoal);
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.25s ease;
+}
+
+
+/* ========================================
+   MOBILE NAVIGATION
+======================================== */
+
+.mobile-navigation {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1100;
+
+    padding: 28px 24px;
+
+    background-color: var(--color-ivory);
+
+    overflow-y: auto;
+
+    transform: translateX(100%);
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.mobile-navigation.is-open {
+    transform: translateX(0);
+}
+
+
+/* ========================================
+   MOBILE HEADER
+======================================== */
+
+.mobile-navigation-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+
+    border-bottom: 1px solid var(--color-sand);
+}
+
+.mobile-navigation-title {
+    font-family: var(--font-display);
+
+    font-size: 28px;
+
+    color: var(--color-charcoal);
+}
+
+.mobile-navigation-close {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 1px solid var(--color-sand);
+
+    border-radius: 50%;
+
+    color: var(--color-charcoal);
+
+    font-size: 24px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+}
+
+.mobile-navigation-close:hover {
+    background-color: var(--color-gold);
+
+    color: var(--color-white);
+}
+
+
+/* ========================================
+   MOBILE CONTENT
+======================================== */
+
+.mobile-navigation-content {
+    display: flex;
+
+    flex-direction: column;
+
+    padding-top: 24px;
+}
+
+.mobile-navigation-link {
+    padding: 17px 0;
+
+    color: var(--color-charcoal);
+
+    border-bottom: 1px solid var(--color-cream);
+
+    font-family: var(--font-display);
+
+    font-size: 27px;
+
+    transition:
+        color 0.3s ease,
+        padding-left 0.3s ease;
+}
+
+.mobile-navigation-link:hover {
+    color: var(--color-gold);
+
+    padding-left: 8px;
+}
+
+.mobile-navigation-divider {
+    height: 1px;
+
+    margin: 18px 0;
+
+    background-color: var(--color-sand);
+}
+
+.mobile-navigation-cta {
+    margin-top: 24px;
+
+    width: 100%;
+}
+
+
+/* ========================================
+   SEARCH PANEL
+======================================== */
+
+.search-panel {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1050;
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    padding-top: 130px;
+
+    background-color:
+        rgba(17, 17, 15, 0.35);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+.search-panel.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-panel-inner {
+    width: min(
+        calc(100% - 32px),
+        720px
+    );
+
+    padding: var(--space-7);
+
+    background-color: var(--color-ivory);
+
+    border: 1px solid var(--color-sand);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+        0 30px 80px rgba(17, 17, 15, 0.18);
+
+    transform: translateY(-15px);
+
+    transition:
+        transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.search-panel.is-open .search-panel-inner {
+    transform: translateY(0);
+}
+
+.search-panel-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: var(--space-6);
+}
+
+.search-panel-close {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    background-color: transparent;
+
+    border: 1px solid var(--color-sand);
+
+    border-radius: 50%;
+
+    color: var(--color-charcoal);
+
+    font-size: 23px;
+
+    cursor: pointer;
+}
+
+.search-panel-close:hover {
+    background-color: var(--color-gold);
+
+    color: var(--color-white);
+
+    border-color: var(--color-gold);
+}
+
+.search-panel .search-form {
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+    align-items: end;
+
+    gap: var(--space-4);
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 1050px) {
+
+    .navbar-menu {
+        gap: var(--space-5);
+    }
+
+    .navbar-cta {
+        padding-inline: 18px;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .navbar {
+        min-height: 76px;
+
+        width: min(
+            calc(100% - 32px),
+            var(--container-width)
+        );
+    }
+
+    .site-header.is-scrolled .navbar {
+        min-height: 68px;
+    }
+
+    .navbar-main,
+    .navbar-actions {
+        display: none;
+    }
+
+    .navbar-mobile-toggle {
+        display: flex;
+    }
+
+    .mobile-navigation {
+        display: block;
+    }
+
+}
+
+
+@media (max-width: 640px) {
+
+    .navbar {
+        min-height: 70px;
+    }
+
+    .navbar-brand-name {
+        font-size: 28px;
+    }
+
+    .navbar-brand-subtitle {
+        font-size: 8px;
+    }
+
+    .search-panel {
+        padding-top: 90px;
+    }
+
+    .search-panel-inner {
+        padding: var(--space-5);
+    }
+
+    .search-form {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* AURELIA ACCOUNT / USER MENU STYLES
+   Add this block at the END of css/navigation.css. */
+
+.navbar-user{position:relative}
+.navbar-user .user-toggle{position:relative;color:inherit}
+.navbar-user .user-toggle span{font-size:0;display:block;width:20px;height:20px}
+
+.navbar-user .user-toggle::before{
+    content:"";position:absolute;width:6px;height:6px;border:1.3px solid currentColor;
+    border-radius:50%;top:3px;left:50%;transform:translateX(-50%);
+}
+.navbar-user .user-toggle::after{
+    content:"";position:absolute;width:12px;height:7px;border:1.3px solid currentColor;
+    border-bottom:0;border-radius:9px 9px 0 0;bottom:2px;left:50%;transform:translateX(-50%);
+}
+
+.navbar-user>.dropdown-menu{
+    left:auto;right:0;top:calc(100% + 14px);min-width:235px;padding:10px;
+}
+.navbar-user.is-open>.dropdown-menu{
+    opacity:1;visibility:visible;transform:translateY(0);
+}
+
+.account-menu-heading{
+    padding:12px 13px 14px;margin-bottom:4px;border-bottom:1px solid var(--color-cream);
+}
+.account-menu-kicker{
+    display:block;margin-bottom:5px;color:var(--color-gold-dark);font-size:8px;
+    font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+}
+.account-menu-heading strong{
+    display:block;color:var(--color-charcoal);font-family:var(--font-display);
+    font-size:22px;font-weight:600;
+}
+.navbar .account-signout{
+    width:100%;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;
+}
+.navbar .account-signout:hover{color:var(--color-gold-dark);background:var(--color-ivory)}
+.mobile-account-signout{
+    width:100%;border:0;background:transparent;text-align:left;cursor:pointer;font:inherit;
+}
+
+
+
+
+/* =========================================================
+   AURELIA HOTEL — PREMIUM NAVIGATION DROPDOWNS
+   ---------------------------------------------------------
+   IMPORTANT:
+   - Add this block at the VERY END of css/navigation.css
+   - Do NOT delete or replace the existing dropdown CSS.
+   - This is an override layer for the existing navigation.
+   - Existing HTML and navigation.js remain unchanged.
+   ========================================================= */
+
+/* ---------- Premium panel ---------- */
+
+.navbar-item.dropdown > .dropdown-menu,
+.navbar-user > .dropdown-menu {
+    margin-top: 0;
+    padding: 10px;
+    min-width: 230px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.98),
+            rgba(250,247,240,.98)
+        );
+
+    border: 1px solid rgba(191,157,91,.22);
+    border-radius: 12px;
+
+    box-shadow:
+        0 24px 55px rgba(20,35,30,.13),
+        0 7px 18px rgba(20,35,30,.08);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    overflow: hidden;
+
+    transform-origin: top center;
+    transition:
+        opacity .24s ease,
+        visibility .24s ease,
+        transform .24s cubic-bezier(.22,.61,.36,1),
+        box-shadow .24s ease;
+}
+
+/* Keep the existing closed/open logic, but make the entrance smoother. */
+
+.navbar-item.dropdown > .dropdown-menu {
+    transform: translateY(9px) scale(.97);
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu {
+    transform: translateY(0) scale(1);
+}
+
+.navbar-user > .dropdown-menu {
+    transform: translateY(9px) scale(.97);
+}
+
+.navbar-user.is-open > .dropdown-menu {
+    transform: translateY(0) scale(1);
+}
+
+
+/* ---------- Small luxury accent at the top ---------- */
+
+.navbar-item.dropdown > .dropdown-menu::before,
+.navbar-user > .dropdown-menu::before {
+    content: "";
+    display: block;
+    width: 34px;
+    height: 1px;
+    margin: 2px 12px 8px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        var(--color-gold),
+        transparent
+    );
+
+    opacity: .75;
+}
+
+
+/* ---------- Navigation links ---------- */
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link,
+.navbar-user > .dropdown-menu .dropdown-link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 42px;
+    padding: 11px 13px 11px 17px;
+
+    border-radius: 7px;
+
+    color: var(--color-charcoal);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .055em;
+
+    transition:
+        color .2s ease,
+        background-color .2s ease,
+        padding-left .2s ease,
+        transform .2s ease;
+}
+
+
+/* Gold indicator */
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link::before,
+.navbar-user > .dropdown-menu .dropdown-link::before {
+    content: "";
+
+    position: absolute;
+    left: 7px;
+    top: 50%;
+
+    width: 2px;
+    height: 0;
+
+    border-radius: 10px;
+
+    background: var(--color-gold);
+
+    transform: translateY(-50%);
+
+    transition: height .2s ease;
+}
+
+
+/* Arrow / elegant cue */
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link::after {
+    content: "↗";
+
+    margin-left: 18px;
+
+    color: var(--color-gold-dark);
+    font-size: 11px;
+
+    opacity: 0;
+    transform: translate(-5px, 3px);
+
+    transition:
+        opacity .2s ease,
+        transform .2s ease;
+}
+
+
+/* Hover */
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link:hover,
+.navbar-user > .dropdown-menu .dropdown-link:hover {
+    color: var(--color-green-deep);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(190,158,96,.10),
+            rgba(190,158,96,.025)
+        );
+
+    padding-left: 21px;
+}
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link:hover::before,
+.navbar-user > .dropdown-menu .dropdown-link:hover::before {
+    height: 20px;
+}
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link:hover::after {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+/* ---------- Main navigation dropdown trigger ---------- */
+
+.navbar-item.dropdown > .dropdown-toggle {
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-toggle {
+    color: var(--color-gold-dark);
+}
+
+
+/* Existing arrow gets a subtle movement */
+
+.navbar-item.dropdown > .dropdown-toggle .dropdown-arrow {
+    display: inline-block;
+
+    transition:
+        transform .25s ease,
+        color .2s ease;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-toggle .dropdown-arrow {
+    transform: rotate(180deg);
+    color: var(--color-gold-dark);
+}
+
+
+/* ---------- User menu ---------- */
+
+.navbar-user > .dropdown-menu {
+    min-width: 245px;
+}
+
+.navbar-user > .dropdown-menu .dropdown-link {
+    font-size: 10px;
+}
+
+.navbar-user > .dropdown-menu .account-menu-heading {
+    position: relative;
+
+    padding: 14px 14px 16px;
+    margin: 0 0 5px;
+
+    border-bottom: 1px solid rgba(191,157,91,.16);
+}
+
+.navbar-user > .dropdown-menu .account-menu-heading::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    bottom: -1px;
+
+    width: 25px;
+    height: 1px;
+
+    background: var(--color-gold);
+}
+
+
+/* ---------- Staggered entrance for links ---------- */
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link,
+.navbar-user.is-open > .dropdown-menu .dropdown-link {
+    animation: aureliaDropdownItem .28s ease both;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link:nth-child(2) {
+    animation-delay: .025s;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link:nth-child(3) {
+    animation-delay: .05s;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link:nth-child(4) {
+    animation-delay: .075s;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link:nth-child(5) {
+    animation-delay: .10s;
+}
+
+.navbar-item.dropdown.is-open > .dropdown-menu .dropdown-link:nth-child(6) {
+    animation-delay: .125s;
+}
+
+@keyframes aureliaDropdownItem {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- Better focus accessibility ---------- */
+
+.navbar-item.dropdown > .dropdown-menu .dropdown-link:focus-visible,
+.navbar-user > .dropdown-menu .dropdown-link:focus-visible {
+    outline: 1px solid var(--color-gold);
+    outline-offset: -2px;
+    background: rgba(190,158,96,.08);
+}
+
+
+/* ---------- Mobile: keep dropdown behavior simple ---------- */
+
+@media (max-width: 900px) {
+    .navbar-item.dropdown > .dropdown-menu,
+    .navbar-user > .dropdown-menu {
+        box-shadow:
+            0 18px 35px rgba(20,35,30,.12),
+            0 5px 12px rgba(20,35,30,.07);
+    }
+
+    .navbar-item.dropdown > .dropdown-menu .dropdown-link::after {
+        display: none;
+    }
+}
+
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    .navbar-item.dropdown > .dropdown-menu,
+    .navbar-user > .dropdown-menu,
+    .navbar-item.dropdown > .dropdown-menu .dropdown-link,
+    .navbar-user > .dropdown-menu .dropdown-link {
+        transition: none !important;
+        animation: none !important;
+    }
+}

@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Aurelia Hotel — a modern luxury hotel experience."
+    >
+
+    <title>Aurelia Hotel</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+
+</head>
+
+
+<body>
+
+    <!-- ==============================
+         HEADER
+    =============================== -->
+
+    <header class="site-header">
+
+    <nav class="navbar" aria-label="Main navigation">
+
+        <!-- ==================================
+             BRAND
+        =================================== -->
+
+        <a href="index.html" class="navbar-brand">
+            <span class="navbar-brand-name">Aurelia</span>
+            <span class="navbar-brand-subtitle">Luxury Hotel</span>
+        </a>
+
+
+        <!-- ==================================
+             DESKTOP NAVIGATION
+        =================================== -->
+
+        <div class="navbar-main">
+
+            <ul class="navbar-menu">
+
+                <!-- Stay -->
+
+                <li class="navbar-item dropdown">
+
+                    <button
+                        class="navbar-link dropdown-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+                        Stay
+
+                        <span class="dropdown-arrow" aria-hidden="true">
+                            ↓
+                        </span>
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <a
+                            href="rooms.html"
+                            class="dropdown-link"
+                        >
+                            Rooms & Suites
+                        </a>
+
+                        <a
+                            href="room-details.html"
+                            class="dropdown-link"
+                        >
+                            Explore a Room
+                        </a>
+
+                        <a
+                            href="booking.html"
+                            class="dropdown-link"
+                        >
+                            Book Your Stay
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- Experiences -->
+
+                <li class="navbar-item dropdown">
+
+                    <button
+                        class="navbar-link dropdown-toggle"
+                        type="button"
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                    >
+                        Experiences
+
+                        <span class="dropdown-arrow" aria-hidden="true">
+                            ↓
+                        </span>
+                    </button>
+
+
+                    <div class="dropdown-menu">
+
+                        <a
+                            href="experiences.html"
+                            class="dropdown-link"
+                        >
+                            All Experiences
+                        </a>
+
+                        <a
+                            href="dining.html"
+                            class="dropdown-link"
+                        >
+                            Dining
+                        </a>
+
+                    </div>
+
+                </li>
+
+
+                <!-- About -->
+
+                <li class="navbar-item">
+
+                    <a
+                        href="about.html"
+                        class="navbar-link"
+                    >
+                        About
+                    </a>
+
+                </li>
+
+
+                <!-- Contact -->
+
+                <li class="navbar-item">
+
+                    <a
+                        href="contact.html"
+                        class="navbar-link"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- ==================================
+             NAVIGATION ACTIONS
+        =================================== -->
+
+        <div class="navbar-actions">
+
+            <!-- Search -->
+
+            <button
+                class="navbar-icon-btn search-toggle"
+                type="button"
+                aria-label="Open search"
+                aria-expanded="false"
+            >
+                <span aria-hidden="true">⌕</span>
+            </button>
+
+
+            <!-- User -->
+
+            <div class="navbar-user dropdown">
+
+                <button
+                    class="navbar-icon-btn user-toggle"
+                    type="button"
+                    aria-label="Open account menu"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                >
+                    <span aria-hidden="true">○</span>
+                </button>
+
+
+                <div class="dropdown-menu dropdown-menu-right">
+
+                    <a
+                        href="login.html"
+                        class="dropdown-link"
+                    >
+                        Sign In
+                    </a>
+
+                    <a
+                        href="signup.html"
+                        class="dropdown-link"
+                    >
+                        Create Account
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Booking CTA -->
+
+            <a
+                href="booking.html"
+                class="btn btn-primary navbar-cta"
+            >
+                Book Your Stay
+            </a>
+
+        </div>
+
+
+        <!-- ==================================
+             MOBILE MENU TOGGLE
+        =================================== -->
+
+        <button
+            class="navbar-mobile-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+        >
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+    </nav>
+
+
+    <!-- ==================================
+         MOBILE NAVIGATION
+    =================================== -->
+
+    <div
+        class="mobile-navigation"
+        id="mobile-navigation"
+    >
+
+        <div class="mobile-navigation-header">
+
+            <span class="mobile-navigation-title">
+                Menu
+            </span>
+
+            <button
+                class="mobile-navigation-close"
+                type="button"
+                aria-label="Close navigation menu"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="mobile-navigation-content">
+
+            <a
+                href="rooms.html"
+                class="mobile-navigation-link"
+            >
+                Rooms & Suites
+            </a>
+
+            <a
+                href="experiences.html"
+                class="mobile-navigation-link"
+            >
+                Experiences
+            </a>
+
+            <a
+                href="dining.html"
+                class="mobile-navigation-link"
+            >
+                Dining
+            </a>
+
+            <a
+                href="about.html"
+                class="mobile-navigation-link"
+            >
+                About Aurelia
+            </a>
+
+            <a
+                href="contact.html"
+                class="mobile-navigation-link"
+            >
+                Contact
+            </a>
+
+
+            <div class="mobile-navigation-divider"></div>
+
+
+            <a
+                href="login.html"
+                class="mobile-navigation-link"
+            >
+                Sign In
+            </a>
+
+            <a
+                href="signup.html"
+                class="mobile-navigation-link"
+            >
+                Create Account
+            </a>
+
+
+            <a
+                href="booking.html"
+                class="btn btn-primary mobile-navigation-cta"
+            >
+                Book Your Stay
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================
+         SEARCH PANEL
+    =================================== -->
+
+    <div
+        class="search-panel"
+        aria-hidden="true"
+    >
+
+        <div class="search-panel-inner">
+
+            <div class="search-panel-header">
+
+                <span class="eyebrow">
+                    Discover Aurelia
+                </span>
+
+                <button
+                    class="search-panel-close"
+                    type="button"
+                    aria-label="Close search"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <form class="search-form">
+
+                <div class="form-group">
+
+                    <label
+                        for="nav-search"
+                        class="form-label"
+                    >
+                        What are you looking for?
+                    </label>
+
+                    <input
+                        type="search"
+                        id="nav-search"
+                        class="form-input"
+                        placeholder="Search rooms, dining, experiences..."
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Search
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+    </header>
+    <main>
+
+        <!-- ==============================
+     HERO — AURELIA
+=============================== -->
+
+<section id="home" class="hero-section">
+
+    <!-- Hero Slides -->
+    <div class="hero-slider">
+
+        <!-- Slide 01 — Exterior -->
+        <article class="hero-slide hero-slide--active">
+
+            <div class="hero-media">
+                <img
+                    src="assets/images/hero-aurelia-exterior.png"
+                    alt="Aurelia hotel exterior at golden hour"
+                    class="hero-image"
+                >
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-eyebrow">
+                    A New Standard of Hospitality
+                </span>
+
+                <h1 class="hero-title">
+                    Where Luxury
+                    <span>Feels Effortless.</span>
+                </h1>
+
+                <p class="hero-description">
+                    An intimate luxury retreat shaped by timeless design,
+                    exceptional service, and unforgettable moments.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#search"
+                        class="hero-button hero-button--primary"
+                    >
+                        Book Your Stay
+                    </a>
+
+                    <a
+                        href="#featured-rooms"
+                        class="hero-button hero-button--secondary"
+                    >
+                        Explore Rooms
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Slide 02 — Lobby -->
+        <article class="hero-slide">
+
+            <div class="hero-media">
+                <img
+                    src="assets/images/hero-aurelia-lobby.png"
+                    alt="Aurelia luxury hotel lobby"
+                    class="hero-image"
+                >
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-eyebrow">
+                    Arrive. Exhale.
+                </span>
+
+                <h2 class="hero-title">
+                    A Place Made
+                    <span>for Unhurried Moments.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Thoughtful spaces, warm materials, and quiet details
+                    designed to make every arrival feel extraordinary.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#featured-rooms"
+                        class="hero-button hero-button--primary"
+                    >
+                        Discover Aurelia
+                    </a>
+
+                    <a
+                        href="#experiences"
+                        class="hero-button hero-button--secondary"
+                    >
+                        Explore Experiences
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- Slide 03 — Aerial Estate -->
+        <article class="hero-slide">
+
+            <div class="hero-media">
+                <img
+                    src="assets/images/hero-aurelia-aerial.png"
+                    alt="Aerial view of Aurelia hotel estate and surrounding landscape"
+                    class="hero-image"
+                >
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+                <span class="hero-eyebrow">
+                    Beyond the Stay
+                </span>
+
+                <h2 class="hero-title">
+                    An Entire World
+                    <span>to Discover.</span>
+                </h2>
+
+                <p class="hero-description">
+                    From serene gardens to curated experiences,
+                    discover everything that makes Aurelia a destination
+                    in its own right.
+                </p>
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#experiences"
+                        class="hero-button hero-button--primary"
+                    >
+                        Discover Experiences
+                    </a>
+
+                    <a
+                        href="#location"
+                        class="hero-button hero-button--secondary"
+                    >
+                        Explore The Estate
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+  <!-- =========================================
+     AURELIA — BOOKING BAR
+========================================= -->
+
+<section class="hero-booking" aria-label="Hotel booking">
+
+    <div class="hero-booking__field">
+        <span class="hero-booking__label">Check In</span>
+
+        <button
+            type="button"
+            class="hero-booking__trigger"
+            id="booking-checkin"
+        >
+            Select Date
+        </button>
+    </div>
+
+
+    <div class="hero-booking__divider"></div>
+
+
+    <div class="hero-booking__field">
+        <span class="hero-booking__label">Check Out</span>
+
+        <button
+            type="button"
+            class="hero-booking__trigger"
+            id="booking-checkout"
+        >
+            Select Date
+        </button>
+    </div>
+
+
+    <div class="hero-booking__divider"></div>
+
+
+    <div class="hero-booking__field">
+        <span class="hero-booking__label">Guests</span>
+
+        <button
+            type="button"
+            class="hero-booking__trigger"
+            id="booking-guests"
+        >
+            2 Guests
+        </button>
+    </div>
+
+
+    <button
+        type="button"
+        class="hero-booking__submit"
+        id="booking-submit"
+    >
+        Check Availability
+    </button>
+
+</section>
+
+
+
+    <!-- Slider Controls -->
+    <div class="hero-slider-controls">
+
+        <button
+            type="button"
+            class="hero-slider-arrow hero-slider-arrow--prev"
+            aria-label="Previous slide"
+        >
+            <span class="hero-arrow-icon hero-arrow-icon--prev" aria-hidden="true"></span>
+        </button>
+
+
+        <div
+            class="hero-slider-indicators"
+            role="tablist"
+            aria-label="Hero slides"
+        >
+
+            <button
+                type="button"
+                class="hero-slider-indicator hero-slider-indicator--active"
+                role="tab"
+                aria-label="Go to slide 1"
+                aria-selected="true"
+                data-slide="0"
+            >
+                <span></span>
+            </button>
+
+            <button
+                type="button"
+                class="hero-slider-indicator"
+                role="tab"
+                aria-label="Go to slide 2"
+                aria-selected="false"
+                data-slide="1"
+            >
+                <span></span>
+            </button>
+
+            <button
+                type="button"
+                class="hero-slider-indicator"
+                role="tab"
+                aria-label="Go to slide 3"
+                aria-selected="false"
+                data-slide="2"
+            >
+                <span></span>
+            </button>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="hero-slider-arrow hero-slider-arrow--next"
+            aria-label="Next slide"
+        >
+            <span class="hero-arrow-icon hero-arrow-icon--next" aria-hidden="true"></span>
+        </button>
+
+    </div>
+
+
+    <!-- Scroll Indicator -->
+    <div class="hero-scroll-indicator">
+
+        <span>
+            Scroll to explore
+        </span>
+
+        <span class="hero-scroll-line"></span>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SEARCH ENGINE
+========================================================= -->
+
+<section id="search" class="search-section">
+
+    <div class="search-container">
+
+        <!-- Search Header -->
+        <div class="search-header">
+
+            <span class="search-eyebrow">
+                Find Your Stay
+            </span>
+
+            <h2 class="search-title">
+                Search Rooms
+            </h2>
+
+            <p class="search-description">
+                Choose your dates and preferences to discover
+                the right room at Aurelia Hotel.
+            </p>
+
+        </div>
+
+
+        <!-- Search Form -->
+        <form
+            class="search-form"
+            id="hotel-search-form"
+            novalidate
+        >
+
+            <!-- Destination -->
+
+            <div class="search-field search-field--destination">
+
+                <label
+                    class="search-field-label"
+                    for="search-destination"
+                >
+                    Destination
+                </label>
+
+                <div class="search-field-control">
+
+                    <input
+                        type="text"
+                        id="search-destination"
+                        name="destination"
+                        class="search-input"
+                        placeholder="Where are you going?"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Check In -->
+
+            <div class="search-field">
+
+                <label
+                    class="search-field-label"
+                    for="search-check-in"
+                >
+                    Check-in
+                </label>
+
+                <div class="search-field-control">
+
+                    <input
+                        type="text"
+                        id="search-check-in"
+                        name="checkIn"
+                        class="search-input search-date-input"
+                        placeholder="Select date"
+                        readonly
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Check Out -->
+
+            <div class="search-field">
+
+                <label
+                    class="search-field-label"
+                    for="search-check-out"
+                >
+                    Check-out
+                </label>
+
+                <div class="search-field-control">
+
+                    <input
+                        type="text"
+                        id="search-check-out"
+                        name="checkOut"
+                        class="search-input search-date-input"
+                        placeholder="Select date"
+                        readonly
+                        autocomplete="off"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Guests -->
+
+            <div class="search-field">
+
+                <label
+                    class="search-field-label"
+                    for="search-guests"
+                >
+                    Guests
+                </label>
+
+                <button
+                    type="button"
+                    id="search-guests"
+                    class="search-input search-select-trigger"
+                    aria-expanded="false"
+                    aria-haspopup="dialog"
+                >
+                    2 Guests
+                </button>
+
+            </div>
+
+
+            <!-- Rooms -->
+
+            <div class="search-field">
+
+                <label
+                    class="search-field-label"
+                    for="search-rooms"
+                >
+                    Rooms
+                </label>
+
+                <button
+                    type="button"
+                    id="search-rooms"
+                    class="search-input search-select-trigger"
+                    aria-expanded="false"
+                    aria-haspopup="dialog"
+                >
+                    1 Room
+                </button>
+
+            </div>
+
+
+            <!-- Search Button -->
+
+            <button
+                type="submit"
+                class="search-submit-button"
+            >
+                <span>
+                    Search Rooms
+                </span>
+
+                <span
+                    class="search-submit-arrow"
+                    aria-hidden="true"
+                >
+                    →
+                </span>
+
+            </button>
+
+        </form>
+
+
+        <!-- Search Error -->
+
+        <div
+            class="search-message"
+            id="search-message"
+            role="alert"
+            aria-live="polite"
+        ></div>
+
+
+        <!-- Guests Dropdown -->
+
+        <div
+            class="search-dropdown search-guests-dropdown"
+            id="search-guests-dropdown"
+            aria-hidden="true"
+        >
+
+            <div class="search-dropdown-header">
+
+                <div>
+                    <span class="search-dropdown-eyebrow">
+                        Booking
+                    </span>
+
+                    <h3>
+                        Guests
+                    </h3>
+                </div>
+
+                <button
+                    type="button"
+                    class="search-dropdown-close"
+                    data-close-dropdown="guests"
+                    aria-label="Close guests selector"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- Adults -->
+
+            <div class="search-counter-row">
+
+                <div class="search-counter-info">
+
+                    <strong>
+                        Adults
+                    </strong>
+
+                    <span>
+                        Ages 13+
+                    </span>
+
+                </div>
+
+                <div class="search-counter-controls">
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="adults"
+                        data-action="decrease"
+                        aria-label="Decrease adults"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="search-counter-value"
+                        id="search-adults-count"
+                    >
+                        2
+                    </span>
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="adults"
+                        data-action="increase"
+                        aria-label="Increase adults"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Children -->
+
+            <div class="search-counter-row">
+
+                <div class="search-counter-info">
+
+                    <strong>
+                        Children
+                    </strong>
+
+                    <span>
+                        Ages 0–12
+                    </span>
+
+                </div>
+
+                <div class="search-counter-controls">
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="children"
+                        data-action="decrease"
+                        aria-label="Decrease children"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="search-counter-value"
+                        id="search-children-count"
+                    >
+                        0
+                    </span>
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="children"
+                        data-action="increase"
+                        aria-label="Increase children"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Done -->
+
+            <button
+                type="button"
+                class="search-dropdown-done"
+                data-close-dropdown="guests"
+            >
+                Done
+            </button>
+
+        </div>
+
+
+        <!-- Rooms Dropdown -->
+
+        <div
+            class="search-dropdown search-rooms-dropdown"
+            id="search-rooms-dropdown"
+            aria-hidden="true"
+        >
+
+            <div class="search-dropdown-header">
+
+                <div>
+                    <span class="search-dropdown-eyebrow">
+                        Booking
+                    </span>
+
+                    <h3>
+                        Rooms
+                    </h3>
+                </div>
+
+                <button
+                    type="button"
+                    class="search-dropdown-close"
+                    data-close-dropdown="rooms"
+                    aria-label="Close rooms selector"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="search-counter-row">
+
+                <div class="search-counter-info">
+
+                    <strong>
+                        Rooms
+                    </strong>
+
+                    <span>
+                        Number of rooms
+                    </span>
+
+                </div>
+
+                <div class="search-counter-controls">
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="rooms"
+                        data-action="decrease"
+                        aria-label="Decrease rooms"
+                    >
+                        −
+                    </button>
+
+                    <span
+                        class="search-counter-value"
+                        id="search-rooms-count"
+                    >
+                        1
+                    </span>
+
+                    <button
+                        type="button"
+                        class="search-counter-button"
+                        data-counter="rooms"
+                        data-action="increase"
+                        aria-label="Increase rooms"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="search-dropdown-done"
+                data-close-dropdown="rooms"
+            >
+                Done
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FEATURED ROOMS
+========================================================= -->
+
+<section
+    id="featured-rooms"
+    class="featured-rooms-section"
+    aria-labelledby="featured-rooms-title"
+>
+
+    <div class="featured-rooms-container">
+
+        <div class="featured-rooms-header">
+
+            <div class="featured-rooms-heading">
+
+                <span class="featured-rooms-eyebrow">
+                    Stay at Aurelia
+                </span>
+
+                <h2
+                    id="featured-rooms-title"
+                    class="featured-rooms-title"
+                >
+                    Rooms Designed
+                    <span>for Unhurried Living.</span>
+                </h2>
+
+            </div>
+
+            <div class="featured-rooms-intro">
+
+                <p class="featured-rooms-description">
+                    Discover thoughtfully designed rooms and suites,
+                    created around natural materials, quiet luxury,
+                    and the feeling of having nowhere else to be.
+                </p>
+
+                <a
+                    href="rooms.html"
+                    class="featured-rooms-link"
+                >
+                    <span>View All Rooms</span>
+                    <span aria-hidden="true">→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="featured-rooms-grid">
+
+            <!-- Room 01 -->
+            <article class="room-card room-card--featured">
+
+                <a
+                    href="room-details.html"
+                    class="room-card-image"
+                    aria-label="Explore the Aurelia Garden Suite"
+                >
+
+                    <img
+                        src="assets/images/room-garden-suite.png"
+                        alt="Aurelia Garden Suite"
+                        loading="lazy"
+                    >
+
+                    <span class="room-card-badge">
+                        Featured
+                    </span>
+
+                </a>
+
+                <div class="room-card-content">
+
+                    <div class="room-card-top">
+
+                        <div>
+
+                            <span class="room-card-eyebrow">
+                                Suite
+                            </span>
+
+                            <h3 class="room-card-title">
+                                Garden Suite
+                            </h3>
+
+                        </div>
+
+                        <div class="room-card-price">
+                            <strong>$480</strong>
+                            <span>/ night</span>
+                        </div>
+
+                    </div>
+
+                    <p class="room-card-description">
+                        A serene suite opening onto private gardens,
+                        with generous living space and soft natural light.
+                    </p>
+
+                    <div class="room-card-meta">
+
+                        <span>2 Guests</span>
+                        <span>72 m²</span>
+                        <span>King Bed</span>
+
+                    </div>
+
+                    <a
+                        href="room-details.html"
+                        class="room-card-link"
+                    >
+                        <span>Explore Suite</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Room 02 -->
+            <article class="room-card">
+
+                <a
+                    href="room-details.html"
+                    class="room-card-image"
+                    aria-label="Explore the Aurelia Deluxe Room"
+                >
+
+                    <img
+                        src="assets/images/room-deluxe.png"
+                        alt="Aurelia Deluxe Room"
+                        loading="lazy"
+                    >
+
+                </a>
+
+                <div class="room-card-content">
+
+                    <div class="room-card-top">
+
+                        <div>
+
+                            <span class="room-card-eyebrow">
+                                Room
+                            </span>
+
+                            <h3 class="room-card-title">
+                                Deluxe Room
+                            </h3>
+
+                        </div>
+
+                        <div class="room-card-price">
+                            <strong>$320</strong>
+                            <span>/ night</span>
+                        </div>
+
+                    </div>
+
+                    <p class="room-card-description">
+                        An elegant retreat balancing refined comfort,
+                        warm textures, and views across the estate.
+                    </p>
+
+                    <div class="room-card-meta">
+
+                        <span>2 Guests</span>
+                        <span>42 m²</span>
+                        <span>King Bed</span>
+
+                    </div>
+
+                    <a
+                        href="room-details.html"
+                        class="room-card-link"
+                    >
+                        <span>Explore Room</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- Room 03 -->
+            <article class="room-card">
+
+                <a
+                    href="room-details.html"
+                    class="room-card-image"
+                    aria-label="Explore the Aurelia Terrace Room"
+                >
+
+                    <img
+                        src="assets/images/room-terrace.png"
+                        alt="Aurelia Terrace Room"
+                        loading="lazy"
+                    >
+
+                </a>
+
+                <div class="room-card-content">
+
+                    <div class="room-card-top">
+
+                        <div>
+
+                            <span class="room-card-eyebrow">
+                                Room
+                            </span>
+
+                            <h3 class="room-card-title">
+                                Terrace Room
+                            </h3>
+
+                        </div>
+
+                        <div class="room-card-price">
+                            <strong>$390</strong>
+                            <span>/ night</span>
+                        </div>
+
+                    </div>
+
+                    <p class="room-card-description">
+                        A light-filled room with a private terrace,
+                        designed for slow mornings and quiet evenings.
+                    </p>
+
+                    <div class="room-card-meta">
+
+                        <span>2 Guests</span>
+                        <span>50 m²</span>
+                        <span>King Bed</span>
+
+                    </div>
+
+                    <a
+                        href="room-details.html"
+                        class="room-card-link"
+                    >
+                        <span>Explore Room</span>
+                        <span aria-hidden="true">→</span>
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+       
+        <!-- Experiences -->
+        <!-- =========================================================
+             AURELIA EXPERIENCE
+        ========================================================= -->
+        <section
+            id="experiences"
+            class="experience-section"
+            aria-labelledby="experience-title"
+        >
+            <div class="experience-container">
+                <div class="experience-layout">
+
+                    <div class="experience-media">
+                        <img
+                            src="assets/images/experience photo.png"
+                            alt="Aurelia hotel estate surrounded by landscaped gardens"
+                            class="experience-image"
+                            loading="lazy"
+                        >
+
+                        <span class="experience-media-label">
+                            The Aurelia Experience
+                        </span>
+                    </div>
+
+                    <div class="experience-content">
+
+                        <span class="experience-eyebrow">
+                            Aurelia Experience
+                        </span>
+
+                        <h2
+                            id="experience-title"
+                            class="experience-title"
+                        >
+                            More than a stay,
+                            <span>a feeling to remember.</span>
+                        </h2>
+
+                        <p class="experience-description">
+                            At Aurelia, every stay unfolds at its own pace.
+                            From intimate dining and restorative wellness to
+                            carefully curated moments beyond the room, each
+                            detail is designed to leave a lasting impression.
+                        </p>
+
+                        <a
+                            href="experiences.html"
+                            class="experience-action"
+                        >
+                            <span>Discover Experiences</span>
+                            <span
+                                class="experience-action-arrow"
+                                aria-hidden="true"
+                            >→</span>
+                        </a>
+
+                        <div class="experience-features">
+
+                            <div class="experience-feature">
+                                <span
+                                    class="experience-feature-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <h3 class="experience-feature-title">
+                                    Private Dining
+                                </h3>
+
+                                <p class="experience-feature-text">
+                                    Intimate tables, thoughtful menus,
+                                    and evenings made personal.
+                                </p>
+                            </div>
+
+                            <div class="experience-feature">
+                                <span
+                                    class="experience-feature-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <h3 class="experience-feature-title">
+                                    Wellness
+                                </h3>
+
+                                <p class="experience-feature-text">
+                                    Quiet rituals and restorative spaces
+                                    for a slower kind of luxury.
+                                </p>
+                            </div>
+
+                            <div class="experience-feature">
+                                <span
+                                    class="experience-feature-mark"
+                                    aria-hidden="true"
+                                ></span>
+
+                                <h3 class="experience-feature-title">
+                                    Curated Experiences
+                                </h3>
+
+                                <p class="experience-feature-text">
+                                    Distinctive moments created around
+                                    the place, the season, and you.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================================================
+             DINING
+        ========================================================= -->
+        <section id="dining" class="dining-section" aria-labelledby="dining-title">
+            <div class="dining-container">
+                <div class="dining-layout">
+                    <div class="dining-media">
+                        <img src="assets/images/aurelia-dining.png" alt="Aurelia dining atmosphere" loading="lazy">
+                        <span class="dining-media-caption">Taste, slowly.</span>
+                    </div>
+                    <div class="dining-content">
+                        <span class="dining-eyebrow">Dining at Aurelia</span>
+                        <h2 id="dining-title" class="dining-title">A table worth<br><span>remembering.</span></h2>
+                        <p class="dining-description">
+                            Seasonal ingredients, intimate rooms, and menus shaped around the rhythm of the estate. From a quiet breakfast to an unhurried evening, dining at Aurelia is part of the stay itself.
+                        </p>
+                        <div class="dining-highlights" role="list">
+                            <button type="button" class="dining-highlight is-active" data-dining-focus="all">
+                                <span>01</span><strong>All Day</strong>
+                            </button>
+                            <button type="button" class="dining-highlight" data-dining-focus="private">
+                                <span>02</span><strong>Private Dining</strong>
+                            </button>
+                            <button type="button" class="dining-highlight" data-dining-focus="seasonal">
+                                <span>03</span><strong>Seasonal Menus</strong>
+                            </button>
+                        </div>
+                        <p class="dining-focus-copy" id="dining-focus-copy">Breakfast, lunch, and dinner are served with the same quiet attention to detail.</p>
+                        <a href="dining.html" class="dining-action"><span>Explore Dining</span><span aria-hidden="true">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             WHY AURELIA
+        ========================================================= -->
+        <section id="why-aurelia" class="why-aurelia-section" aria-labelledby="why-aurelia-title">
+            <div class="why-aurelia-container">
+                <div class="why-aurelia-heading">
+                    <span class="why-aurelia-eyebrow">The Aurelia Difference</span>
+                    <h2 id="why-aurelia-title" class="why-aurelia-title">Quiet luxury,<br><span>deeply considered.</span></h2>
+                    <p class="why-aurelia-description">
+                        Every part of Aurelia is designed to feel effortless: considered spaces, personal service, and details that reveal themselves slowly.
+                    </p>
+                </div>
+                <div class="why-aurelia-stats">
+                    <article class="why-aurelia-stat"><span>01</span><strong>24/7</strong><p>Personal service, whenever you need it.</p></article>
+                    <article class="why-aurelia-stat"><span>02</span><strong>42</strong><p>Rooms and suites, each intentionally distinct.</p></article>
+                    <article class="why-aurelia-stat"><span>03</span><strong>1:1</strong><p>Thoughtful attention shaped around each guest.</p></article>
+                    <article class="why-aurelia-stat"><span>04</span><strong>∞</strong><p>Small moments designed to stay with you.</p></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             REVIEWS
+        ========================================================= -->
+        <section id="reviews" class="reviews-section" aria-labelledby="reviews-title">
+            <div class="reviews-container">
+                <div class="reviews-header">
+                    <div><span class="reviews-eyebrow">Guest Notes</span><h2 id="reviews-title" class="reviews-title">A few words<br><span>from our guests.</span></h2></div>
+                    <div class="reviews-controls">
+                        <button type="button" class="reviews-arrow reviews-arrow--prev" aria-label="Previous review">←</button>
+                        <button type="button" class="reviews-arrow reviews-arrow--next" aria-label="Next review">→</button>
+                    </div>
+                </div>
+                <div class="reviews-track" tabindex="0">
+                    <article class="review-card is-active"><span class="review-mark">“</span><blockquote>Aurelia somehow makes everything feel slower. The service is invisible in the best possible way.</blockquote><footer><strong>Amelia R.</strong><span>London, UK</span></footer></article>
+                    <article class="review-card"><span class="review-mark">“</span><blockquote>The gardens, the room, the evening dining — every detail felt considered without ever feeling formal.</blockquote><footer><strong>Daniel M.</strong><span>New York, USA</span></footer></article>
+                    <article class="review-card"><span class="review-mark">“</span><blockquote>We came for a weekend and left feeling like we had been away much longer. That is a rare kind of luxury.</blockquote><footer><strong>Sofia K.</strong><span>Dubai, UAE</span></footer></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             LOCATION
+        ========================================================= -->
+        <section id="location" class="location-section" aria-labelledby="location-title">
+            <div class="location-container">
+                <div class="location-layout">
+                    <div class="location-content">
+                        <span class="location-eyebrow">Find Aurelia</span>
+                        <h2 id="location-title" class="location-title">Close to everything.<br><span>Far from ordinary.</span></h2>
+                        <p class="location-description">
+                            Set within a private landscaped estate, Aurelia offers a quiet retreat with the city’s most important places still within easy reach.
+                        </p>
+                        <div class="location-details">
+                            <div><span>Address</span><strong>Aurelia Estate<br>Jalan Raya Kedewatan No. 88
+                                                                                Kedewatan, Ubud, Gianyar
+                                                                                 Bali 80571, Indonesia</strong></div>
+                            <div><span>From the airport</span><strong>28 min by car</strong></div>
+                            <div><span>Concierge</span><strong>Available 24 hours</strong></div>
+                        </div>
+                        <a href="contact.html" class="location-action"><span>Plan Your Arrival</span><span aria-hidden="true">→</span></a>
+                    </div>
+                    <div class="location-map" aria-label="Stylized Aurelia location map">
+                        <div class="location-map-grid"></div>
+                        <span class="location-map-road road-one"></span><span class="location-map-road road-two"></span><span class="location-map-road road-three"></span>
+                        <div class="location-pin"><span></span><strong>Aurelia</strong></div>
+                        <div class="location-map-label location-map-label--north">CITY</div>
+                        <div class="location-map-label location-map-label--south">ESTATE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================
+             FINAL CTA
+        ========================================================= -->
+        <section id="final-cta" class="final-cta-section" aria-labelledby="final-cta-title">
+            <div class="final-cta-inner">
+                <span class="final-cta-eyebrow">Your stay begins here</span>
+                <h2 id="final-cta-title" class="final-cta-title">Come for the room.<br><span>Stay for the feeling.</span></h2>
+                <p class="final-cta-description">Aurelia is ready when you are.</p>
+                <a href="#search" class="final-cta-button"><span>Book Your Stay</span><span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+         FOOTER
+    =============================== -->
+
+    <footer class="site-footer">
+        <div class="site-footer-main">
+            <div class="site-footer-brand">
+                <a href="index.html" class="site-footer-logo">Aurelia</a>
+                <p>Luxury hospitality shaped around quiet moments, thoughtful design, and memorable stays.</p>
+                <span class="site-footer-location">18 Garden Avenue · Aurelia Estate</span>
+            </div>
+            <div class="site-footer-column"><span class="site-footer-heading">Stay</span><a href="rooms.html">Rooms & Suites</a><a href="booking.html">Book Your Stay</a><a href="experiences.html">Experiences</a></div>
+            <div class="site-footer-column"><span class="site-footer-heading">Discover</span><a href="dining.html">Dining</a><a href="about.html">About Aurelia</a><a href="contact.html">Contact</a></div>
+            <div class="site-footer-column site-footer-newsletter"><span class="site-footer-heading">The Aurelia Letter</span><p>Occasional notes from the estate, new experiences, and seasonal invitations.</p><form class="newsletter-form"><label class="sr-only" for="footer-email">Email address</label><input id="footer-email" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">→</button><span class="newsletter-message" aria-live="polite"></span></form></div>
+        </div>
+        <div class="site-footer-bottom"><span>© <span data-current-year></span> Aurelia Hotel. All rights reserved.</span><div><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

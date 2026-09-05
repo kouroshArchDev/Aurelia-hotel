@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurelia Hotel — a modern luxury hotel experience.">
+<title>Dashboard | Aurelia Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/account.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="navbar" aria-label="Main navigation">
+<a href="index.html" class="navbar-brand"><span class="navbar-brand-name">Aurelia</span><span class="navbar-brand-subtitle">Luxury Hotel</span></a>
+<div class="navbar-main"><ul class="navbar-menu">
+<li class="navbar-item dropdown"><button class="navbar-link dropdown-toggle" type="button" aria-expanded="false">Stay <span class="dropdown-arrow">↓</span></button><div class="dropdown-menu">
+<a href="rooms.html" class="dropdown-link">Rooms &amp; Suites</a><a href="room-details.html" class="dropdown-link">Explore a Room</a><a href="booking.html" class="dropdown-link">Book Your Stay</a>
+</div></li>
+<li class="navbar-item dropdown"><button class="navbar-link dropdown-toggle" type="button" aria-expanded="false">Experiences <span class="dropdown-arrow">↓</span></button><div class="dropdown-menu">
+<a href="experiences.html" class="dropdown-link">All Experiences</a><a href="dining.html" class="dropdown-link">Dining</a>
+</div></li>
+<li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+<li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+</ul></div>
+<div class="navbar-actions">
+<button class="navbar-icon-btn search-toggle" type="button" aria-label="Open search" aria-expanded="false"><span aria-hidden="true">⌕</span></button>
+<div class="navbar-user dropdown"><button class="navbar-icon-btn user-toggle" type="button" aria-label="Open account menu" aria-expanded="false"><span aria-hidden="true">○</span></button>
+<div class="dropdown-menu dropdown-menu-right"><a href="login.html" class="dropdown-link">Sign In</a><a href="signup.html" class="dropdown-link">Create Account</a></div></div>
+<a href="booking.html" class="btn btn-primary navbar-cta">Book Your Stay</a>
+</div>
+<button class="navbar-mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-navigation" id="mobile-navigation"><div class="mobile-navigation-header"><span class="mobile-navigation-title">Menu</span><button class="mobile-navigation-close" type="button" aria-label="Close navigation menu">×</button></div>
+<div class="mobile-navigation-content">
+<a href="rooms.html" class="mobile-navigation-link">Rooms &amp; Suites</a><a href="experiences.html" class="mobile-navigation-link">Experiences</a><a href="dining.html" class="mobile-navigation-link">Dining</a><a href="about.html" class="mobile-navigation-link">About Aurelia</a><a href="contact.html" class="mobile-navigation-link">Contact</a>
+<div class="mobile-navigation-divider"></div><a href="login.html" class="mobile-navigation-link">Sign In</a><a href="signup.html" class="mobile-navigation-link">Create Account</a><a href="booking.html" class="btn btn-primary mobile-navigation-cta">Book Your Stay</a>
+</div></div>
+<div class="search-panel" aria-hidden="true"><div class="search-panel-inner"><div class="search-panel-header"><span class="eyebrow">Discover Aurelia</span><button class="search-panel-close" type="button" aria-label="Close search">×</button></div>
+<form class="search-form"><div class="form-group"><label for="nav-search" class="form-label">What are you looking for?</label><input type="search" id="nav-search" class="form-input" placeholder="Search rooms, dining, experiences..." autocomplete="off"></div><button type="submit" class="btn btn-primary">Search</button></form>
+</div></div></header>
+<main class="account-page"><section class="account-hero account-hero-compact"><div class="account-container"><span class="eyebrow">Aurelia · Private Guest Area</span><h1>Good to see you, <em id="dashboard-name">Guest.</em></h1><p>Everything you need for your stays, preferences, and saved discoveries in one quiet place.</p></div></section><section class="account-section"><div class="account-container"><div class="dashboard-grid"><a class="dashboard-card account-panel" href="bookings.html"><span>01</span><strong>My Bookings</strong><p>View upcoming and previous stays.</p><b>Open →</b></a><a class="dashboard-card account-panel" href="favorites.html"><span>02</span><strong>Favorites</strong><p>Rooms and experiences you have saved.</p><b>Open →</b></a><a class="dashboard-card account-panel" href="profile.html"><span>03</span><strong>Profile</strong><p>Personal details and stay preferences.</p><b>Open →</b></a><a class="dashboard-card account-panel" href="settings.html"><span>04</span><strong>Settings</strong><p>Privacy, notifications, and account controls.</p><b>Open →</b></a></div><div class="dashboard-highlight account-panel"><div><span class="account-label">Your next step</span><h2>Ready for your next <em>escape?</em></h2><p>Choose a room and let the rest of your Aurelia stay unfold naturally.</p></div><a class="btn btn-primary btn-lg" href="booking.html">Book Your Stay</a></div></div></section></main>
+<footer class="account-footer"><div class="account-container account-footer-grid">
+<div><a href="index.html" class="navbar-brand"><span class="navbar-brand-name">Aurelia</span><span class="navbar-brand-subtitle">Luxury Hotel</span></a><p>A private retreat shaped by quiet luxury, natural materials, and unhurried moments.</p></div>
+<div><span class="account-footer-label">Explore</span><a href="rooms.html">Rooms &amp; Suites</a><a href="experiences.html">Experiences</a><a href="dining.html">Dining</a><a href="about.html">About Aurelia</a></div>
+<div><span class="account-footer-label">Stay</span><a href="booking.html">Book Your Stay</a><a href="bookings.html">My Bookings</a><a href="contact.html">Contact</a></div>
+</div><div class="account-footer-bottom"><span>© <span data-current-year></span> Aurelia Hotel</span><span>Designed for unhurried living.</span></div></footer>
+<script src="js/navigation.js"></script>
+<script src="js/main.js"></script>
+<script src="js/account.js"></script>
+</body>
+</html>

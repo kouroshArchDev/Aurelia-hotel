@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Aurelia Hotel — rooms and suites designed for unhurried living.">
+<title>Rooms & Suites — Aurelia Hotel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/rooms.css">
+</head>
+<body>
+<header class="site-header">
+<nav class="navbar" aria-label="Main navigation">
+<a href="index.html" class="navbar-brand"><span class="navbar-brand-name">Aurelia</span><span class="navbar-brand-subtitle">Luxury Hotel</span></a>
+<div class="navbar-main"><ul class="navbar-menu">
+<li class="navbar-item dropdown"><button class="navbar-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Stay <span class="dropdown-arrow">↓</span></button><div class="dropdown-menu"><a href="rooms.html" class="dropdown-link">Rooms & Suites</a><a href="room-details.html" class="dropdown-link">Explore a Room</a><a href="booking.html" class="dropdown-link">Book Your Stay</a></div></li>
+<li class="navbar-item dropdown"><button class="navbar-link dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">Experiences <span class="dropdown-arrow">↓</span></button><div class="dropdown-menu"><a href="experiences.html" class="dropdown-link">All Experiences</a><a href="dining.html" class="dropdown-link">Dining</a></div></li>
+<li class="navbar-item"><a href="about.html" class="navbar-link">About</a></li>
+<li class="navbar-item"><a href="contact.html" class="navbar-link">Contact</a></li>
+</ul></div>
+<div class="navbar-actions">
+<button class="navbar-icon-btn search-toggle" type="button" aria-label="Open search" aria-expanded="false"><span>⌕</span></button>
+<div class="navbar-user dropdown"><button class="navbar-icon-btn user-toggle" type="button" aria-label="Open account menu" aria-expanded="false" aria-haspopup="true"><span>○</span></button><div class="dropdown-menu dropdown-menu-right"><a href="login.html" class="dropdown-link">Sign In</a><a href="signup.html" class="dropdown-link">Create Account</a></div></div>
+<a href="booking.html" class="btn btn-primary navbar-cta">Book Your Stay</a>
+</div>
+<button class="navbar-mobile-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-navigation" id="mobile-navigation"><div class="mobile-navigation-header"><span class="mobile-navigation-title">Menu</span><button class="mobile-navigation-close" type="button" aria-label="Close navigation menu">×</button></div><div class="mobile-navigation-content">
+<a href="rooms.html" class="mobile-navigation-link">Rooms & Suites</a><a href="room-details.html" class="mobile-navigation-link">Explore a Room</a><a href="experiences.html" class="mobile-navigation-link">Experiences</a><a href="dining.html" class="mobile-navigation-link">Dining</a><a href="about.html" class="mobile-navigation-link">About Aurelia</a><a href="contact.html" class="mobile-navigation-link">Contact</a><div class="mobile-navigation-divider"></div><a href="login.html" class="mobile-navigation-link">Sign In</a><a href="signup.html" class="mobile-navigation-link">Create Account</a><a href="booking.html" class="btn btn-primary mobile-navigation-cta">Book Your Stay</a>
+</div></div>
+<div class="search-panel" aria-hidden="true"><div class="search-panel-inner"><div class="search-panel-header"><span class="eyebrow">Discover Aurelia</span><button class="search-panel-close" type="button" aria-label="Close search">×</button></div><form class="search-form"><div class="form-group"><label for="nav-search" class="form-label">What are you looking for?</label><input type="search" id="nav-search" class="form-input" placeholder="Search rooms, dining, experiences..." autocomplete="off"></div><button type="submit" class="btn btn-primary">Search</button></form></div></div>
+</header>
+<main>
+<section class="rooms-hero"><div class="rooms-hero-glow rooms-hero-glow--one"></div><div class="rooms-hero-glow rooms-hero-glow--two"></div><div class="rooms-container rooms-hero-inner"><div class="rooms-hero-copy"><span class="rooms-eyebrow">Stay at Aurelia</span><h1>Rooms & Suites<br><span>made for staying slowly.</span></h1><p>Three distinct spaces, each shaped around natural light, tactile materials, and the quiet rhythm of the Aurelia estate.</p><a href="#rooms-collection" class="rooms-hero-link">Explore the collection <span>↓</span></a></div><div class="rooms-hero-note"><span>03</span><strong>Rooms</strong><small>One estate. Three ways to stay.</small></div></div></section>
+
+<section class="rooms-intro"><div class="rooms-container rooms-intro-grid"><div><span class="rooms-eyebrow rooms-eyebrow--dark">The Collection</span><h2>Choose the atmosphere<br><span>that feels like yours.</span></h2></div><div class="rooms-intro-copy"><p>From a private garden retreat to an elevated terrace escape, every Aurelia room balances refined comfort with an effortless connection to the surrounding landscape.</p><div class="rooms-intro-rule"></div><span>Ubud, Bali · Indonesia</span></div></div></section>
+
+<section class="rooms-collection" id="rooms-collection"><div class="rooms-container"><div class="rooms-grid">
+
+<article class="rooms-card rooms-card--featured" data-room-card="garden"><a href="room-details.html?room=garden" class="rooms-card-media" aria-label="Explore Garden Suite"><img src="assets/images/room-garden-suite.png" alt="Aurelia Garden Suite" loading="lazy"><span class="rooms-card-number">01</span><span class="rooms-card-badge">Featured</span><span class="rooms-card-view">Explore room <span>↗</span></span></a><div class="rooms-card-body"><div class="rooms-card-heading"><div><span class="rooms-card-eyebrow">Suite</span><h3>Garden Suite</h3></div><div class="rooms-card-price"><strong>$480</strong><span>/ night</span></div></div><p>A serene suite opening onto private gardens, with generous living space and soft natural light.</p><div class="rooms-card-meta"><span>72 m²</span><span>2 Guests</span><span>King Bed</span><span>Private Garden</span></div><a href="room-details.html?room=garden" class="rooms-card-link">View Garden Suite <span>→</span></a></div></article>
+
+<article class="rooms-card" data-room-card="deluxe"><a href="room-details.html?room=deluxe" class="rooms-card-media" aria-label="Explore Deluxe Room"><img src="assets/images/room-deluxe.png" alt="Aurelia Deluxe Room" loading="lazy"><span class="rooms-card-number">02</span><span class="rooms-card-view">Explore room <span>↗</span></span></a><div class="rooms-card-body"><div class="rooms-card-heading"><div><span class="rooms-card-eyebrow">Room</span><h3>Deluxe Room</h3></div><div class="rooms-card-price"><strong>$320</strong><span>/ night</span></div></div><p>An elegant retreat balancing refined comfort, warm textures, and views across the estate.</p><div class="rooms-card-meta"><span>42 m²</span><span>2 Guests</span><span>King Bed</span><span>Estate View</span></div><a href="room-details.html?room=deluxe" class="rooms-card-link">View Deluxe Room <span>→</span></a></div></article>
+
+<article class="rooms-card" data-room-card="terrace"><a href="room-details.html?room=terrace" class="rooms-card-media" aria-label="Explore Terrace Room"><img src="assets/images/room-terrace.png" alt="Aurelia Terrace Room" loading="lazy"><span class="rooms-card-number">03</span><span class="rooms-card-view">Explore room <span>↗</span></span></a><div class="rooms-card-body"><div class="rooms-card-heading"><div><span class="rooms-card-eyebrow">Room</span><h3>Terrace Room</h3></div><div class="rooms-card-price"><strong>$390</strong><span>/ night</span></div></div><p>A light-filled room with a private terrace, designed for slow mornings and quiet evenings.</p><div class="rooms-card-meta"><span>50 m²</span><span>2 Guests</span><span>King Bed</span><span>Private Terrace</span></div><a href="room-details.html?room=terrace" class="rooms-card-link">View Terrace Room <span>→</span></a></div></article>
+
+</div></div></section>
+
+<section class="rooms-philosophy"><div class="rooms-container rooms-philosophy-grid"><div class="rooms-philosophy-mark"><span>A</span></div><div class="rooms-philosophy-copy"><span class="rooms-eyebrow">Aurelia Philosophy</span><h2>Luxury is not more.<br><span>It is better considered.</span></h2><p>Every room is designed around the feeling we want you to leave with: rested, connected, and quietly restored. Materials are tactile, lighting is layered, and every view has been considered.</p></div><div class="rooms-philosophy-features"><div><span>01</span><strong>Natural light</strong><p>Spaces shaped to change beautifully throughout the day.</p></div><div><span>02</span><strong>Quiet materials</strong><p>Timber, stone, linen, and warm textures with a restrained palette.</p></div><div><span>03</span><strong>Private moments</strong><p>Gardens, terraces, and views that create room to slow down.</p></div></div></div></section>
+
+<section class="rooms-experience"><div class="rooms-experience-overlay"></div><div class="rooms-container rooms-experience-inner"><div><span class="rooms-eyebrow">Beyond the Room</span><h2>More than a stay,<br><span>a feeling to remember.</span></h2><p>Continue beyond your room with private dining, wellness, and carefully curated experiences across the Aurelia estate.</p><a href="experiences.html" class="rooms-experience-link">Discover Experiences <span>→</span></a></div><div class="rooms-experience-side"><span>Stay slowly.</span><strong>01 — 03</strong></div></div></section>
+
+<section class="rooms-final"><div class="rooms-container rooms-final-inner"><span class="rooms-eyebrow rooms-eyebrow--dark">Your Aurelia Stay</span><h2>Find the room<br><span>that feels like home.</span></h2><p>Reserve your preferred room and let the rest of your stay unfold naturally.</p><div class="rooms-final-actions"><a href="booking.html" class="rooms-final-primary">Book Your Stay <span>→</span></a><a href="room-details.html" class="rooms-final-secondary">Explore Room Details</a></div></div></section>
+</main>
+
+<footer class="site-footer rooms-footer"><div class="rooms-footer-inner"><div class="rooms-footer-brand"><a href="index.html" class="navbar-brand"><span class="navbar-brand-name">Aurelia</span><span class="navbar-brand-subtitle">Luxury Hotel</span></a><p>A private retreat shaped by quiet luxury, natural materials, and unhurried moments.</p></div><div class="rooms-footer-column"><span>Stay</span><a href="rooms.html">Rooms & Suites</a><a href="room-details.html">Room Details</a><a href="booking.html">Book Your Stay</a></div><div class="rooms-footer-column"><span>Explore</span><a href="experiences.html">Experiences</a><a href="dining.html">Dining</a><a href="about.html">About Aurelia</a></div><div class="rooms-footer-column"><span>Contact</span><a href="contact.html">Contact</a><a href="mailto:stay@aureliahotel.com">stay@aureliahotel.com</a><span>Ubud, Bali · Indonesia</span></div></div><div class="rooms-footer-bottom"><span>© 2026 Aurelia Hotel. All rights reserved.</span><span>Designed for unhurried living.</span></div></footer>
+
+<script src="js/navigation.js"></script>
+<script src="js/rooms.js"></script>
+</body>
+</html>
